@@ -5,15 +5,34 @@
   "main": "backend/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
     "start": "node backend/server.js",
+=======
+    "start": "nodemon backend/server.js",
+>>>>>>> e92a18e (user model and configuration)
     "dev": "nodemon backend/server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongodb": "^4.13.0",
     "mongoose": "^6.8.3"
+=======
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "env": "^0.0.2",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^4.13.0",
+    "mongoose": "^6.9.2",
+    "nodemailer": "^6.9.1",
+    "nodemon": "^2.0.20",
+    "validator": "^13.9.0"
+>>>>>>> e92a18e (user model and configuration)
   }
 }

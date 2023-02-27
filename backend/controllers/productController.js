@@ -5,6 +5,10 @@ const ApiFeatures = require("../utils/apifeatures");
 
 //create product -- Admin
 exports.createProduct = catchAsyncError(async (req, res, next) => {
+<<<<<<< HEAD
+=======
+  req.body.user = req.user.id;
+>>>>>>> e92a18e (user model and configuration)
   const product = await Product.create(req.body);
   res.status(201).json({ success: true, product });
 });
@@ -29,7 +33,11 @@ exports.getAllProdcuts = catchAsyncError(async (req, res) => {
 exports.getProductDetails = catchAsyncError(async (req, res, next) => {
   const product = await Product.findById(req.params.id);
   if (!product) {
+<<<<<<< HEAD
     return next(new ErrorHandler("Product not found", 404));
+=======
+    return next(new ErrorHandler("Product not found", 404)); //ya next callback function ho 
+>>>>>>> e92a18e (user model and configuration)
   }
   res.status(200).json({
     success: true,
@@ -40,7 +48,11 @@ exports.getProductDetails = catchAsyncError(async (req, res, next) => {
 //Update Product --Admin
 
 exports.updateProduct = catchAsyncError(async (req, res, next) => {
+<<<<<<< HEAD
   let product = Product.findById(req.params.id);
+=======
+  let product = await Product.findById(req.params.id);
+>>>>>>> e92a18e (user model and configuration)
   if (!product) {
     return res.status(500).json({
       success: false,

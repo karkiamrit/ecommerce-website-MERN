@@ -8,10 +8,14 @@ process.on("uncaughtException",(err)=>{
     console.log('Shutting down the server due to uncaught Exception');
     process.exit(1);
 });
+<<<<<<< HEAD
 
 //-->uncaught exception bhaneko undefined variable use bhako ya aru kunai similar type of error
 
 
+=======
+//-->uncaught exception bhaneko undefined variable use bhako ya aru kunai similar type of error ,surumai define garne ho yo 
+>>>>>>> e92a18e (user model and configuration)
 
 
 //config
@@ -20,7 +24,11 @@ dotenv.config({path:"backend/config/config.env"})
 //Connecting to database
 connectDatabase();
 
+<<<<<<< HEAD
 app.listen(process.env.PORT,()=>{
+=======
+const server=app.listen(process.env.PORT,()=>{
+>>>>>>> e92a18e (user model and configuration)
     console.log(`Server is working on http://localhost:${process.env.PORT}`)
 })
 
@@ -32,6 +40,13 @@ process.on('unhandledRejection',err=>{
     server.close(()=>{
         process.exit(1);
     });
+<<<<<<< HEAD
 });
 //yo bhaneko jaba promise resolve hunna taba dinxa like model ma name,ra address ko schema thyo bhane yedi address wala input nei gayena bhane aune error
 
+=======
+});//jaile last ma define garne yo start bhayesi server
+//yo bhaneko jaba promise resolve hunna taba dinxa like model ma name,ra address ko schema thyo bhane yedi address wala input nei gayena bhane aune error
+//env ma db ko string galat lekhda ni same error auxa
+//yesto error aye malaiforce server close garne ho beijat huna bata jogina :))
+>>>>>>> e92a18e (user model and configuration)
